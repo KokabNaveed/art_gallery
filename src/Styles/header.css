@@ -1,0 +1,90 @@
+/* Reset & Font */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Landing Page Background */
+.landing-page {
+  background-image: url("bg.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+}
+
+/* Dark Overlay */
+.overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+/* Text Styles */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  animation: fadeIn 1.5s ease;
+}
+
+h1 span {
+  color: #ffce54;
+}
+
+h2 {
+  font-weight: 400;
+  margin-bottom: 20px;
+  animation: fadeIn 2s ease;
+}
+
+p {
+  max-width: 600px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  animation: fadeIn 2.5s ease;
+}
+
+/* Button Styles */
+button {
+  padding: 12px 25px;
+  font-size: 1rem;
+  border: none;
+  background-color: #ff4b2b;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+button:hover, .btn-hover {
+  background-color: #ff1c00;
+  transform: scale(1.05);
+}
+
+/* Fade In Animations */
+.fade-in { animation: fadeIn 1.5s ease; }
+.fade-in-delay { animation: fadeIn 2s ease; }
+.fade-in-delay2 { animation: fadeIn 2.5s ease; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Example Gallery Section for Scroll Demo */
+#gallery {
+  height: 100vh;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
