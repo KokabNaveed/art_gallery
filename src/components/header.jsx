@@ -4,9 +4,6 @@ import { useState } from "react";
 export default function Header() {
   const [hover, setHover] = useState(false);
 
-  const handleExplore = () => {
-    document.getElementById("gallery").scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <div className="landing-page">
@@ -21,7 +18,6 @@ export default function Header() {
         <button
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
-          onClick={handleExplore}
           className={hover ? "btn-hover" : ""}
         >
           Explore the Gallery {hover ? "🎨" : ""}
