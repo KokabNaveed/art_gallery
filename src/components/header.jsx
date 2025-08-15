@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import "../Styles/header.css";
 import { useState } from "react";
 
@@ -15,13 +16,13 @@ export default function Header() {
         <p className="fade-in-delay2">
           Step inside a world where imagination flows freely, and every masterpiece holds a piece of the artist’s soul. From bold, vibrant strokes to delicate, intricate details — here, art speaks louder than words.
         </p>
-        <button
+        <Link to={'gallery'}
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
-          className={hover ? "btn-hover" : ""}
+          className={hover ? "btn-hover" : "btn"}
         >
           Explore the Gallery {hover ? "🎨" : ""}
-        </button>
+        </Link>
       </div>
     </div>
   );

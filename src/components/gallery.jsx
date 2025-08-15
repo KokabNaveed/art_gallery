@@ -32,14 +32,29 @@ const Gallery = () => {
 
     return (
         <div className="gallery-container">
-            <h1>🎨 Virtual Art Gallery</h1>
+            <h1>Virtual Art Gallery</h1>
             <div className="grid">
 
                 {images.map(img => (
                     <div key={img.id} className="image-card" onClick={() => setSelectedImage(img)}>
                         <img src={img.urls.small} alt={img.alt_description} />
+                        <div className="gallery-info">
+                            <h3>{img.alt_description || "Untitled"}</h3>
+                            <p>By: {img.user.name}</p>
+                        </div>
+                        <div className="hover-content">
+                            <button
+                                onClick={(e) => {
+                                    e.stopPropagation(); // prevent opening modal
+                                    toggleLike(img);
+                                }}
+                            >
+                                {likedImages.some(liked => liked.id === img.id) ? "💔 Unlike" : "❤️ Like"}
+                            </button>
+                        </div>
                     </div>
                 ))}
+
 
             </div>
 

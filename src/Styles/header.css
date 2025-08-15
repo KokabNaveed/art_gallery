@@ -54,7 +54,7 @@ p {
 }
 
 /* Button Styles */
-button {
+.btn, .btn-hover{
   padding: 12px 25px;
   font-size: 1rem;
   border: none;
@@ -63,11 +63,15 @@ button {
   cursor: pointer;
   border-radius: 6px;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
-button:hover, .btn-hover {
+
+.btn:hover, .btn-hover {
   background-color: #ff1c00;
+  color: white;
   transform: scale(1.05);
+  text-decoration: none;
 }
 
 /* Fade In Animations */
